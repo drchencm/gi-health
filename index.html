@@ -630,7 +630,7 @@
         </div>
     </div>
 
-    <!-- Appointment Booking Modal Demo with Google Forms Fetch Integration -->
+    <!-- Appointment Booking Modal Demo with Google Apps Script Integration -->
     <div id="booking-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl max-w-md w-full overflow-hidden shadow-2xl space-y-4 p-6">
             <div class="flex justify-between items-center border-b border-gray-100 pb-3">
@@ -646,33 +646,33 @@
                 <button onclick="closeBookingModal()" class="text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
 
-            <!-- Form using Fetch API submission to avoid CORS/Iframe blocking -->
+            <!-- Form integrated with Google Apps Script Backend -->
             <form id="googleBookingForm" class="space-y-3 text-xs">
                 
                 <div>
                     <label class="block font-bold text-gray-700 mb-1">就診人姓名 *</label>
-                    <input type="text" name="entry.2005620554" required placeholder="請輸入姓名" class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
+                    <input type="text" id="patientName" required placeholder="請輸入姓名" class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
                 </div>
 
                 <div>
                     <label class="block font-bold text-gray-700 mb-1">聯絡電話 *</label>
-                    <input type="tel" name="entry.1166974658" required placeholder="例如：0912-345-678" class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
+                    <input type="tel" id="patientPhone" required placeholder="例如：0912-345-678" class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
                 </div>
 
                 <div class="grid grid-cols-1 gap-2">
                     <div>
                         <label class="block font-bold text-gray-700 mb-1">希望預約日期 *</label>
-                        <input type="date" name="entry.839337160" required class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
+                        <input type="date" id="bookingDate" required class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
                     </div>
                 </div>
 
                 <div>
                     <label class="block font-bold text-gray-700 mb-1">主要諮詢症狀/備註 *</label>
-                    <textarea name="entry.1065046570" rows="2" placeholder="例如：長期便秘諮詢、腸道益生菌評估、無痛胃鏡預約..." class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none"></textarea>
+                    <textarea id="bookingNote" rows="2" placeholder="例如：長期便秘諮詢、腸道益生菌評估、無痛胃鏡預約..." class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none"></textarea>
                 </div>
 
                 <div class="bg-gray-50 p-2.5 rounded-lg border border-gray-200 text-[11px] text-gray-500">
-                    <i class="fa-solid fa-shield-halved text-teal"></i> 提交後，資料將直接同步至醫者診所預約系統，專人將於 24 小時內致電確認。
+                    <i class="fa-solid fa-shield-halved text-teal"></i> 提交後，資料將直接同步至試算表，醫者診所專員將於 24 小時內致電確認。
                 </div>
 
                 <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow transition">
@@ -748,7 +748,7 @@
                 date: "2026-10-10",
                 content: `
                     <h3 class="text-lg font-bold text-navy mb-2">排便不順的迷思與正確觀念</h3>
-                    <p class="mb-3">許多人在發生便祕或排便不順時，第一反應是大量吃益生菌或急著買瀉藥。然而在臨床上，陳邦基教授特別強調：<strong>「水分」與「膳食纖維」才是維持腸道蠕動的最核心基礎</strong>。</p>
+                    <p class="mb-3">許多人在發生便祕或排便不順時，第一反應是大量吃益生菌或急著買瀉藥。然而在臨床上，陳邦基教授特別強調：<strong><span>「水分」與「膳食纖維」才是維持腸道蠕動的最核心基礎</span></strong>。</p>
                     <p class="mb-3">益生菌固然能調整腸道菌相，但如果缺少了纖維做為好菌的食物（益生元），以及形成糞便體積所需的原料，益生菌的作用就會大幅受限。</p>
                     <h4 class="font-bold text-navy text-base mt-4 mb-1">陳教授建議黃金三要件：</h4>
                     <ul class="list-disc pl-5 space-y-1 mb-3">
@@ -857,7 +857,7 @@
             document.getElementById('quiz-result').classList.add('hidden');
         }
 
-        // Booking Modal Logic & Fetch Form Submission
+        // Booking Modal Logic & Google Apps Script Integration
         function openBookingModal() {
             document.getElementById('booking-modal').classList.remove('hidden');
         }
@@ -866,27 +866,37 @@
             document.getElementById('booking-modal').classList.add('hidden');
         }
 
-        // 綁定表單透過 Fetch API 提交至 Google Forms
+        // 綁定表單透過 Google Apps Script 穩定寫入試算表
         document.getElementById('googleBookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = document.getElementById('submitBtn');
             btn.disabled = true;
             btn.innerText = '正在傳送預約至醫者診所...';
 
-            const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSffFje-QwfL1JPIsBvFGVvkTQ_8cyWcr8TCDFl_mwsV6v1r-g/formResponse';
-            const formData = new FormData(this);
+            // 請將下方引號內的網址替換為您剛才部署取得的 Google Apps Script 網頁應用程式網址
+            const GAS_URL = 'https://script.google.com/macros/s/您的_GAS_網頁應用程式網址/exec';
 
-            fetch(formUrl, {
+            const formData = {
+                name: document.getElementById('patientName').value,
+                phone: document.getElementById('patientPhone').value,
+                date: document.getElementById('bookingDate').value,
+                note: document.getElementById('bookingNote').value
+            };
+
+            fetch(GAS_URL, {
                 method: 'POST',
-                mode: 'no-cors',
-                body: formData
-            }).then(() => {
-                alert('感謝您的預約申請！您的資料已成功傳送至 Google 表單，醫者診所專員將會於 24 小時內以電話與您聯繫確認門診時間。');
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('感謝您的預約申請！您的資料已成功寫入系統，醫者診所專員將會於 24 小時內以電話與您聯繫確認門診時間。');
                 this.reset();
                 btn.disabled = false;
                 btn.innerText = '確認送出預約申請';
                 closeBookingModal();
-            }).catch(err => {
+            })
+            .catch(err => {
+                console.error(err);
                 alert('傳送發生錯誤，請直接撥打醫者診所專線：02-2757-6888 進行預約。');
                 btn.disabled = false;
                 btn.innerText = '確認送出預約申請';
