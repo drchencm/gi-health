@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陳邦基教授 胃腸肝膽科官方網站 | gi-health.tw</title>
+    <title>陳邦基教授 胃腸肝膽科官方網站 | http://www.gi-health.tw/</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -69,7 +69,7 @@
                     <i class="fa-solid font-bold">gi</i>
                 </div>
                 <div>
-                    <div class="font-bold text-navy leading-tight text-base sm:text-lg">陳邦基教授 <span class="text-xs font-normal text-teal bg-teal/10 px-2 py-0.5 rounded-full ml-1 hidden sm:inline-block">gi-health.tw</span></div>
+                    <div class="font-bold text-navy leading-tight text-base sm:text-lg">陳邦基教授 <span class="text-xs font-normal text-teal bg-teal/10 px-2 py-0.5 rounded-full ml-1 hidden sm:inline-block">http://www.gi-health.tw/</span></div>
                     <div class="text-xs text-gray-500">胃腸肝膽科權威顧問</div>
                 </div>
             </a>
@@ -124,7 +124,7 @@
                     <!-- Avatar / Official Photo -->
                     <div class="relative flex-shrink-0">
                         <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white/80 shadow-2xl overflow-hidden bg-white">
-                            <img src="陳邦基-教授.jpg" alt="陳邦基 教授" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://placehold.co/300x300/003B46/FFF?text=Prof.+Chen';">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj_photo_prof_chen_2/s600/陳邦基-教授_2.jpg" alt="陳邦基 教授" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.src='https://placehold.co/300x300/003B46/FFF?text=Prof.+Chen';">
                         </div>
                         <span class="absolute bottom-1 right-1 bg-emerald-500 border-2 border-white text-white text-xs px-2.5 py-0.5 rounded-full font-medium shadow">
                             <i class="fa-solid fa-circle text-[8px] mr-1"></i>醫者診所駐診中
@@ -597,7 +597,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-white/10 pb-6">
                 <div>
                     <div class="text-lg font-bold text-seafoam">陳邦基教授 胃腸肝膽科官方網站</div>
-                    <div class="text-gray-400 mt-1">網域：gi-health.tw | 門診據點：醫者診所</div>
+                    <div class="text-gray-400 mt-1">網域：http://www.gi-health.tw/ | 門診據點：醫者診所</div>
                 </div>
                 <div class="flex items-center gap-4 text-gray-300 text-sm">
                     <a href="tel:0227576888" class="hover:text-seafoam transition"><i class="fa-solid fa-phone mr-1"></i>02-2757-6888</a>
@@ -630,7 +630,7 @@
         </div>
     </div>
 
-    <!-- Appointment Booking Modal Demo -->
+    <!-- Appointment Booking Modal Demo with Google Forms Integration -->
     <div id="booking-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-2xl max-w-md w-full overflow-hidden shadow-2xl space-y-4 p-6">
             <div class="flex justify-between items-center border-b border-gray-100 pb-3">
@@ -646,44 +646,43 @@
                 <button onclick="closeBookingModal()" class="text-gray-400 hover:text-gray-600"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
 
-            <form onsubmit="submitBooking(event)" class="space-y-3 text-xs">
+            <!-- Hidden Iframe to prevent redirect and smoothly submit to Google Forms -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.submitted) { handleFormSuccess(); }"></iframe>
+
+            <form id="googleBookingForm" 
+                  action="https://docs.google.com/forms/d/e/1FAIpQLSffFje-QwfL1JPIsBvFGVvkTQ_8cyWcr8TCDFl_mwsV6v1r-g/formResponse" 
+                  method="POST" 
+                  target="hidden_iframe" 
+                  onsubmit="window.submitted=true; disableSubmitBtn();" 
+                  class="space-y-3 text-xs">
+                
                 <div>
                     <label class="block font-bold text-gray-700 mb-1">就診人姓名 *</label>
-                    <input type="text" required placeholder="請輸入姓名" class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
+                    <input type="text" name="entry.2005620554" required placeholder="請輸入姓名" class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
                 </div>
 
                 <div>
                     <label class="block font-bold text-gray-700 mb-1">聯絡電話 *</label>
-                    <input type="tel" required placeholder="例如：0912-345-678" class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
+                    <input type="tel" name="entry.1166974658" required placeholder="例如：0912-345-678" class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
                 </div>
 
-                <div class="grid grid-cols-2 gap-2">
+                <div class="grid grid-cols-1 gap-2">
                     <div>
-                        <label class="block font-bold text-gray-700 mb-1">期望預約日期 *</label>
-                        <input type="date" required class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
-                    </div>
-                    <div>
-                        <label class="block font-bold text-gray-700 mb-1">時段選擇 *</label>
-                        <select required class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
-                            <option value="morning">週二早診 (09:00-12:00)</option>
-                            <option value="morning_thu">週四早診 (09:00-12:00)</option>
-                            <option value="afternoon_mon">週一午診 (14:00-17:00)</option>
-                            <option value="afternoon_wed">週三午診 (14:00-17:00)</option>
-                            <option value="afternoon_fri">週五午診 (14:00-17:00)</option>
-                        </select>
+                        <label class="block font-bold text-gray-700 mb-1">希望預約日期 *</label>
+                        <input type="date" name="entry.839337160" required class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block font-bold text-gray-700 mb-1">主要諮詢症狀/備註</label>
-                    <textarea rows="2" placeholder="例如：長期便秘諮詢、腸道益生菌評估、無痛胃鏡預約..." class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none"></textarea>
+                    <label class="block font-bold text-gray-700 mb-1">主要諮詢症狀/備註 *</label>
+                    <textarea name="entry.1065046570" rows="2" placeholder="例如：長期便秘諮詢、腸道益生菌評估、無痛胃鏡預約..." class="w-full p-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal outline-none"></textarea>
                 </div>
 
                 <div class="bg-gray-50 p-2.5 rounded-lg border border-gray-200 text-[11px] text-gray-500">
-                    <i class="fa-solid fa-shield-halved text-teal"></i> 提交後，醫者診所專人將於 24 小時之內致電與您確認正式掛號時間。
+                    <i class="fa-solid fa-shield-halved text-teal"></i> 提交後，資料將直接同步至醫者診所預約系統，專人將於 24 小時內致電確認。
                 </div>
 
-                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow transition">
+                <button type="submit" id="submitBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl shadow transition">
                     確認送出預約申請
                 </button>
             </form>
@@ -865,7 +864,7 @@
             document.getElementById('quiz-result').classList.add('hidden');
         }
 
-        // Booking Modal Logic
+        // Booking Modal Logic & Google Form Submission Handlers
         function openBookingModal() {
             document.getElementById('booking-modal').classList.remove('hidden');
         }
@@ -874,9 +873,19 @@
             document.getElementById('booking-modal').classList.add('hidden');
         }
 
-        function submitBooking(e) {
-            e.preventDefault();
-            alert('感謝您的預約申請！醫者診所專員將會於 24 小時內以電話與您聯繫確認門診時間。');
+        function disableSubmitBtn() {
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = '正在傳送預約至醫者診所...';
+        }
+
+        function handleFormSuccess() {
+            alert('感謝您的預約申請！您的資料已成功寫入系統，醫者診所專員將會於 24 小時內以電話與您聯繫確認門診時間。');
+            document.getElementById('googleBookingForm').reset();
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = false;
+            btn.innerText = '確認送出預約申請';
+            window.submitted = false;
             closeBookingModal();
         }
     </script>
