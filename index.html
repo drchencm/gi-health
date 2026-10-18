@@ -78,7 +78,7 @@
             <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-600">
                 <button onclick="switchTab('home')" class="hover:text-navy transition py-1">首頁總覽</button>
                 <button onclick="switchTab('schedule')" class="hover:text-navy transition py-1">門診資訊與預約</button>
-                <button onclick="switchTab('articles')" class="hover:text-navy transition py-1">健康札記</button>
+                <a href="articles.html" class="hover:text-navy transition py-1">健康札記</a>
                 <button onclick="switchTab('quiz')" class="hover:text-navy transition py-1">腸道自我檢測</button>
             </div>
 
@@ -100,10 +100,10 @@
             <i class="fa-solid fa-hospital text-lg mb-0.5"></i>
             <span>醫者門診</span>
         </button>
-        <button onclick="switchTab('articles')" id="mob-nav-articles" class="flex flex-col items-center justify-center text-gray-500 hover:text-navy">
+        <a href="articles.html" id="mob-nav-articles" class="flex flex-col items-center justify-center text-gray-500 hover:text-navy">
             <i class="fa-solid fa-book-medical text-lg mb-0.5"></i>
             <span>健康札記</span>
-        </button>
+        </a>
         <button onclick="switchTab('quiz')" id="mob-nav-quiz" class="flex flex-col items-center justify-center text-gray-500 hover:text-navy">
             <i class="fa-solid fa-notes-medical text-lg mb-0.5"></i>
             <span>腸道檢測</span>
@@ -178,7 +178,7 @@
                         </div>
                         <h3 class="font-bold text-navy mb-1">腸道微生態與益生菌</h3>
                         <p class="text-xs text-gray-600 leading-relaxed">
-                            精準分析腸道菌相，指導科學化補充益生菌、雙歧桿菌，改善消化吸收到免疫力。
+                            精準分析腸道菌相，指導科學化補充益生菌、雙歧桿菌，改善消化吸送到免疫力。
                         </p>
                     </div>
 
@@ -365,118 +365,6 @@
         </section>
 
 
-        <!-- ================= SECTION 3: HEALTH ARTICLES / BLOG ================= -->
-        <section id="tab-articles" class="hidden space-y-6">
-            <!-- Header & Search Bar -->
-            <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm space-y-4">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-                    <div>
-                        <span class="text-xs text-teal font-semibold tracking-wider uppercase">Prof. Chen Notes</span>
-                        <h2 class="text-2xl font-bold text-navy flex items-center gap-2">
-                            <i class="fa-solid fa-book-medical text-teal"></i> 陳教授健康札記
-                        </h2>
-                    </div>
-                    <!-- Search Input -->
-                    <div class="relative w-full sm:w-64">
-                        <input type="text" id="article-search" oninput="filterArticles()" placeholder="搜尋衛教文章（如：益生菌、便祕）" class="w-full text-xs pl-8 pr-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal">
-                        <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-gray-400 text-xs"></i>
-                    </div>
-                </div>
-
-                <!-- Filter Badges -->
-                <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs hide-scrollbar">
-                    <button onclick="setCategoryFilter('all')" class="cat-btn active font-medium px-3 py-1.5 rounded-full bg-navy text-white whitespace-nowrap transition">全部文章</button>
-                    <button onclick="setCategoryFilter('probiotics')" class="cat-btn font-medium px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition">益生菌與腸道菌</button>
-                    <button onclick="setCategoryFilter('constipation')" class="cat-btn font-medium px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition">便祕與排便調理</button>
-                    <button onclick="setCategoryFilter('endoscopy')" class="cat-btn font-medium px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition">消化系內視鏡</button>
-                </div>
-            </div>
-
-            <!-- Articles Grid List -->
-            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Article Card 1 -->
-                <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="probiotics constipation" onclick="openArticleModal(1)">
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-between text-xs text-gray-500">
-                            <span class="bg-teal/10 text-teal font-medium px-2 py-0.5 rounded">益生菌與腸道</span>
-                            <span>2026-10-10</span>
-                        </div>
-                        <h3 class="font-bold text-navy text-base hover:text-teal transition">
-                            益生菌效果有限？改善便秘：纖維與水才是根本解方
-                        </h3>
-                        <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
-                            許多民眾出現排便不順時，第一反應是大量補充益生菌。然而若缺乏足夠的水分與膳食纖維作為好菌的「糧食」與糞便體積原料，效果往往大打折扣…
-                        </p>
-                    </div>
-                    <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
-                        <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
-                        <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
-                    </div>
-                </div>
-
-                <!-- Article Card 2 -->
-                <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="constipation" onclick="openArticleModal(2)">
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-between text-xs text-gray-500">
-                            <span class="bg-emerald-100 text-emerald-800 font-medium px-2 py-0.5 rounded">便祕與排便</span>
-                            <span>2026-09-28</span>
-                        </div>
-                        <h3 class="font-bold text-navy text-base hover:text-teal transition">
-                            「嗯」到臉紅脖子粗？4 招教你維持排便順暢與消化機能
-                        </h3>
-                        <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
-                            人體每日排便量約 100～300 公克。長期便秘不只造成腹脹與痔瘡，毒素更會在腸道累積。陳教授從日常作息、姿勢與水份飲用教您簡單調整…
-                        </p>
-                    </div>
-                    <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
-                        <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
-                        <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
-                    </div>
-                </div>
-
-                <!-- Article Card 3 -->
-                <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="probiotics" onclick="openArticleModal(3)">
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-between text-xs text-gray-500">
-                            <span class="bg-teal/10 text-teal font-medium px-2 py-0.5 rounded">腸道微生態</span>
-                            <span>2026-09-15</span>
-                        </div>
-                        <h3 class="font-bold text-navy text-base hover:text-teal transition">
-                            維持腸道健康：正確挑選優質益生菌的三大要件
-                        </h3>
-                        <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
-                            人體約 70% 的免疫細胞集中在腸道！市面上益生菌品牌百百種，該如何選擇活菌數量、耐酸能力與具備臨床研究背書的優質菌株？
-                        </p>
-                    </div>
-                    <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
-                        <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
-                        <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
-                    </div>
-                </div>
-
-                <!-- Article Card 4 -->
-                <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="endoscopy" onclick="openArticleModal(4)">
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-between text-xs text-gray-500">
-                            <span class="bg-blue-100 text-blue-800 font-medium px-2 py-0.5 rounded">消化系內視鏡</span>
-                            <span>2026-08-30</span>
-                        </div>
-                        <h3 class="font-bold text-navy text-base hover:text-teal transition">
-                            淺談消化系內視鏡之臨床應用與定期篩檢重要性
-                        </h3>
-                        <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
-                            無痛胃鏡與大腸鏡是預防胃癌和大腸癌的最有效利器。早期發現瘜肉並切除，能降低超過 80% 的惡化風險。了解檢查時機與衛教準備。
-                        </p>
-                    </div>
-                    <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
-                        <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
-                        <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
         <!-- ================= SECTION 4: GUT HEALTH QUIZ ================= -->
         <section id="tab-quiz" class="hidden space-y-6">
             <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm max-w-2xl mx-auto space-y-6">
@@ -611,31 +499,11 @@
         </div>
     </footer>
 
-
-    <!-- ================= MODALS ================= -->
-
-    <!-- Article Detail Reader Modal -->
-    <div id="article-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden flex flex-col shadow-2xl animate-fade-in">
-            <div class="p-4 bg-navy text-white flex justify-between items-center">
-                <span id="modal-category" class="bg-teal text-white text-[10px] px-2 py-0.5 rounded font-medium">衛教專欄</span>
-                <button onclick="closeArticleModal()" class="text-white/80 hover:text-white text-lg px-2"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <div class="p-6 overflow-y-auto space-y-4 text-sm leading-relaxed" id="modal-article-content">
-                <!-- Content Injected by JS -->
-            </div>
-            <div class="p-4 bg-gray-50 border-t border-gray-100 flex justify-end">
-                <button onclick="closeArticleModal()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 text-xs font-bold px-4 py-2 rounded-lg">關閉閱讀</button>
-            </div>
-        </div>
-    </div>
-
-
     <!-- JAVASCRIPT INTERACTIVE LOGIC -->
     <script>
-        // Tab Switch Logic
+        // Tab Switch Logic (Home, Schedule, Quiz)
         function switchTab(tabId) {
-            const tabs = ['home', 'schedule', 'articles', 'quiz'];
+            const tabs = ['home', 'schedule', 'quiz'];
             tabs.forEach(id => {
                 const el = document.getElementById(`tab-${id}`);
                 if (el) el.classList.add('hidden');
@@ -655,115 +523,6 @@
             if (activeTab) activeTab.classList.remove('hidden');
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Articles Search & Category Filter
-        let currentCategory = 'all';
-
-        function setCategoryFilter(cat) {
-            currentCategory = cat;
-            document.querySelectorAll('.cat-btn').forEach(btn => {
-                btn.className = "cat-btn font-medium px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition";
-            });
-            event.target.className = "cat-btn active font-medium px-3 py-1.5 rounded-full bg-navy text-white whitespace-nowrap transition";
-            filterArticles();
-        }
-
-        function filterArticles() {
-            const query = document.getElementById('article-search').value.toLowerCase();
-            const cards = document.querySelectorAll('.article-card');
-
-            cards.forEach(card => {
-                const text = card.innerText.toLowerCase();
-                const category = card.getAttribute('data-category');
-                
-                const matchesCategory = (currentCategory === 'all') || category.includes(currentCategory);
-                const matchesQuery = text.includes(query);
-
-                if (matchesCategory && matchesQuery) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        }
-
-        // Article Modal Database Demo
-        const articlesDB = {
-            1: {
-                title: "益生菌效果有限？改善便秘：纖維與水才是根本解方",
-                category: "益生菌與腸道",
-                date: "2026-10-10",
-                content: `
-                    <h3 class="text-lg font-bold text-navy mb-2">排便不順的迷思與正確觀念</h3>
-                    <p class="mb-3">許多人在發生便祕或排便不順時，第一反應是大量吃益生菌或急著買瀉藥。然而在臨床上，陳邦基教授特別強調：<strong><span>「水分」與「膳食纖維」才是維持腸道蠕動的最核心基礎</span></strong>。</p>
-                    <p class="mb-3">益生菌固然能調整腸道菌相，但如果缺少了纖維做為好菌的食物（益生元），以及形成糞便體積所需的原料，益生菌的作用就會大幅受限。</p>
-                    <h4 class="font-bold text-navy text-base mt-4 mb-1">陳教授建議黃金三要件：</h4>
-                    <ul class="list-disc pl-5 space-y-1 mb-3">
-                        <li><strong>足量飲水：</strong>每日維持 2000c.c. ~ 2500c.c. 的純水攝取，早起一杯溫開水有助觸發胃結腸反射。</li>
-                        <li><strong>充沛膳食纖維：</strong>多攝取深綠色蔬菜、燕麥、奇亞籽與高纖水果（如奇異果、芭樂）。</li>
-                        <li><strong>定時排便習慣：</strong>不忍便，利用飯後腸胃蠕動較活躍時嘗試排便。</li>
-                    </ul>
-                `
-            },
-            2: {
-                title: "「嗯」到臉紅脖子粗？4 招教你維持排便順暢與消化機能",
-                category: "便祕與排便",
-                date: "2026-09-28",
-                content: `
-                    <h3 class="text-lg font-bold text-navy mb-2">正確排便姿勢與生活調整</h3>
-                    <p class="mb-3">長期用力排便不僅容易引發痔瘡，更會造成血壓劇烈波動。陳邦基教授為大家整理出實用的腸道保健 4 招：</p>
-                    <ol class="list-decimal pl-5 space-y-2 mb-3">
-                        <li><strong>蹲姿輔助：</strong>坐馬桶時腳下踩一張約 15-20 公分的小板凳，讓身體稍微前傾，使恥骨直腸肌放鬆，角度更順暢。</li>
-                        <li><strong>規律核心運動：</strong>適度快走、瑜伽或腹部順時針按摩，刺激腸道蠕動。</li>
-                        <li><strong>補充優質油脂：</strong>適量攝取橄欖油、苦茶油或堅果，具有潤滑腸道的功效。</li>
-                        <li><strong>壓力管理：</strong>腸道是人體的「第二大腦」，長期焦慮會抑制腸道正常蠕動。</li>
-                    </ol>
-                `
-            },
-            3: {
-                title: "維持腸道健康：正確挑選優質益生菌的三大要件",
-                category: "腸道微生態",
-                date: "2026-09-15",
-                content: `
-                    <h3 class="text-lg font-bold text-navy mb-2">人體70%免疫在腸道！益生菌怎麼挑？</h3>
-                    <p class="mb-3">腸道菌相的平衡對於整體免疫力、消化吸收甚至情緒都有深刻影響。市面上有上百種益生菌產品，陳教授提出三大挑選法則：</p>
-                    <ul class="list-disc pl-5 space-y-1 mb-3">
-                        <li><strong>1. 菌株有身分證與臨床研究：</strong>選擇標示明確菌株代號（如 A 菌、B 菌雙歧桿菌）且有國內外研究驗證的品牌。</li>
-                        <li><strong>2. 耐酸耐膽鹽技術：</strong>確保益生菌能順利通過胃酸與膽汁的考驗到達腸道。</li>
-                        <li><strong>3. 含有包埋技術與適量菌數：</strong>一般保健每日 100 億至 300 億 CFU 即相當足夠，並非越多越好。</li>
-                    </ul>
-                `
-            },
-            4: {
-                title: "淺談消化系內視鏡之臨床應用與定期篩檢重要性",
-                category: "消化系內視鏡",
-                date: "2026-08-30",
-                content: `
-                    <h3 class="text-lg font-bold text-navy mb-2">內視鏡：預防消化道腫瘤的最強防線</h3>
-                    <p class="mb-3">許多民眾因為害怕疼痛而排斥胃鏡或大腸鏡檢查。然而，大腸癌大多數是由腺瘤性瘜肉歷經 5-10 年演變而來。只要在瘜肉階段透過內視鏡切除，即可大幅阻斷癌變機會。</p>
-                    <p class="mb-3">現代無痛內視鏡技術已非常成熟，在麻醉科醫師全程監控下，受檢者能在舒適無痛的睡眠狀態中完成精準檢查。</p>
-                `
-            }
-        };
-
-        function openArticleModal(id) {
-            const article = articlesDB[id];
-            if (!article) return;
-
-            document.getElementById('modal-category').innerText = article.category;
-            document.getElementById('modal-article-content').innerHTML = `
-                <div class="border-b border-gray-100 pb-3">
-                    <span class="text-xs text-gray-400">${article.date} | 陳邦基教授 衛教撰文</span>
-                    <h2 class="text-xl font-bold text-navy mt-1">${article.title}</h2>
-                </div>
-                ${article.content}
-            `;
-            document.getElementById('article-modal').classList.remove('hidden');
-        }
-
-        function closeArticleModal() {
-            document.getElementById('article-modal').classList.add('hidden');
         }
 
         // Quiz Logic
