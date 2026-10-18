@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陳教授健康札記 | 陳邦基教授胃腸肝膽科</title>
+    <title>陳教授健康札記（16篇專欄） | 陳邦基教授胃腸肝膽科</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -112,30 +112,32 @@
         <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm space-y-4">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                 <div>
-                    <span class="text-xs text-teal font-semibold tracking-wider uppercase">Prof. Chen Notes</span>
+                    <span class="text-xs text-teal font-semibold tracking-wider uppercase">Prof. Chen Blog (16 Articles)</span>
                     <h1 class="text-2xl font-bold text-navy flex items-center gap-2">
-                        <i class="fa-solid fa-book-medical text-teal"></i> 陳教授健康札記
+                        <i class="fa-solid fa-book-medical text-teal"></i> 陳教授健康札記（全系列專欄）
                     </h1>
                 </div>
                 <!-- Search Input -->
                 <div class="relative w-full sm:w-64">
-                    <input type="text" id="article-search" oninput="filterArticles()" placeholder="搜尋衛教文章（如：益生菌、便祕）" class="w-full text-xs pl-8 pr-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal">
+                    <input type="text" id="article-search" oninput="filterArticles()" placeholder="搜尋16篇衛教文章..." class="w-full text-xs pl-8 pr-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal">
                     <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-gray-400 text-xs"></i>
                 </div>
             </div>
 
             <!-- Filter Badges -->
             <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs hide-scrollbar">
-                <button onclick="setCategoryFilter('all')" class="cat-btn active font-medium px-3 py-1.5 rounded-full bg-navy text-white whitespace-nowrap transition">全部文章</button>
+                <button onclick="setCategoryFilter('all')" class="cat-btn active font-medium px-3 py-1.5 rounded-full bg-navy text-white whitespace-nowrap transition">全部文章 (16)</button>
                 <button onclick="setCategoryFilter('probiotics')" class="cat-btn font-medium px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition">益生菌與腸道菌</button>
                 <button onclick="setCategoryFilter('constipation')" class="cat-btn font-medium px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition">便祕與排便調理</button>
                 <button onclick="setCategoryFilter('endoscopy')" class="cat-btn font-medium px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition">消化系內視鏡</button>
+                <button onclick="setCategoryFilter('liver')" class="cat-btn font-medium px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 whitespace-nowrap transition">肝膽胃炎照護</button>
             </div>
         </div>
 
-        <!-- Articles Grid List -->
+        <!-- Articles Grid List (16 Articles) -->
         <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Article Card 1 -->
+            
+            <!-- Article 1 -->
             <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="probiotics constipation" onclick="openArticleModal(1)">
                 <div class="space-y-2">
                     <div class="flex items-center justify-between text-xs text-gray-500">
@@ -143,7 +145,7 @@
                         <span>2026-10-10</span>
                     </div>
                     <h2 class="font-bold text-navy text-base hover:text-teal transition">
-                        益生菌效果有限？改善便秘：纖維與水才是根本解方
+                        1. 益生菌效果有限？改善便秘：纖維與水才是根本解方
                     </h2>
                     <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
                         許多民眾出現排便不順時，第一反應是大量補充益生菌。然而若缺乏足夠的水分與膳食纖維作為好菌的「糧食」與糞便體積原料，效果往往大打折扣…
@@ -155,7 +157,7 @@
                 </div>
             </div>
 
-            <!-- Article Card 2 -->
+            <!-- Article 2 -->
             <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="constipation" onclick="openArticleModal(2)">
                 <div class="space-y-2">
                     <div class="flex items-center justify-between text-xs text-gray-500">
@@ -163,7 +165,7 @@
                         <span>2026-09-28</span>
                     </div>
                     <h2 class="font-bold text-navy text-base hover:text-teal transition">
-                        「嗯」到臉紅脖子粗？4 招教你維持排便順暢與消化機能
+                        2. 「嗯」到臉紅脖子粗？4 招教你維持排便順暢與消化機能
                     </h2>
                     <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
                         人體每日排便量約 100～300 公克。長期便秘不只造成腹脹與痔瘡，毒素更會在腸道累積。陳教授從日常作息、姿勢與水份飲用教您簡單調整…
@@ -175,7 +177,7 @@
                 </div>
             </div>
 
-            <!-- Article Card 3 -->
+            <!-- Article 3 -->
             <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="probiotics" onclick="openArticleModal(3)">
                 <div class="space-y-2">
                     <div class="flex items-center justify-between text-xs text-gray-500">
@@ -183,7 +185,7 @@
                         <span>2026-09-15</span>
                     </div>
                     <h2 class="font-bold text-navy text-base hover:text-teal transition">
-                        維持腸道健康：正確挑選優質益生菌的三大要件
+                        3. 維持腸道健康：正確挑選優質益生菌的三大要件
                     </h2>
                     <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
                         人體約 70% 的免疫細胞集中在腸道！市面上益生菌品牌百百種，該如何選擇活菌數量、耐酸能力與具備臨床研究背書的優質菌株？
@@ -195,7 +197,7 @@
                 </div>
             </div>
 
-            <!-- Article Card 4 -->
+            <!-- Article 4 -->
             <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="endoscopy" onclick="openArticleModal(4)">
                 <div class="space-y-2">
                     <div class="flex items-center justify-between text-xs text-gray-500">
@@ -203,7 +205,7 @@
                         <span>2026-08-30</span>
                     </div>
                     <h2 class="font-bold text-navy text-base hover:text-teal transition">
-                        淺談消化系內視鏡之臨床應用與定期篩檢重要性
+                        4. 淺談消化系內視鏡之臨床應用與定期篩檢重要性
                     </h2>
                     <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
                         無痛胃鏡與大腸鏡是預防胃癌和大腸癌的最有效利器。早期發現瘜肉並切除，能降低超過 80% 的惡化風險。了解檢查時機與衛教準備。
@@ -214,6 +216,247 @@
                     <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
                 </div>
             </div>
+
+            <!-- Article 5 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="liver" onclick="openArticleModal(5)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-amber-100 text-amber-800 font-medium px-2 py-0.5 rounded">胃食道逆流</span>
+                        <span>2026-08-15</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        5. 胃食道逆流老是發作？解析「火燒心」的日常飲食禁忌與照護
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        胸口灼熱、酸水逆流是現代人的文明病。除了藥物治療外，避免過飽、咖啡因與甜食，並調整睡眠姿勢是遠離火燒心的關鍵。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="liver" onclick="openArticleModal(6)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-amber-100 text-amber-800 font-medium px-2 py-0.5 rounded">肝膽保健</span>
+                        <span>2026-07-20</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        6. 脂肪肝不是胖子的專利！保肝護肝的飲食與運動指引
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        瘦子也可能得脂肪肝？當肝臟囤積過多脂肪，若不積極控制可能演變為肝炎、肝硬化。陳教授解析如何透過減脂與地中海飲食逆轉脂肪肝。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 7 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="constipation probiotics" onclick="openArticleModal(7)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-teal/10 text-teal font-medium px-2 py-0.5 rounded">腸道調理</span>
+                        <span>2026-07-05</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        7. 腸躁症（IBS）腹痛腹瀉交替？低FODMAP飲食調理全攻略
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        大腸急躁症患者常飽受腹痛、腹瀉或便秘交替困擾。透過減少高FODMAP（易發酵碳水化合物）食物的攝取，能有效緩解腸道敏感與脹氣。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 8 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="liver" onclick="openArticleModal(8)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-amber-100 text-amber-800 font-medium px-2 py-0.5 rounded">胃炎防護</span>
+                        <span>2026-06-18</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        8. 幽門螺旋桿菌與胃炎、胃潰瘍的關聯及根除治療重要性
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        幽門螺旋桿菌是造成慢性胃炎、胃潰瘍甚至胃癌的高風險因子。透過碳13呼氣試驗檢查並配合完整除菌療程，能徹底守護胃部健康。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 9 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="endoscopy" onclick="openArticleModal(9)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-blue-100 text-blue-800 font-medium px-2 py-0.5 rounded">消化系內視鏡</span>
+                        <span>2026-06-02</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        9. 大腸息肉一定要切除嗎？解析腺瘤性息肉與大腸癌的距離
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        大腸鏡檢查發現息肉不必過度驚慌，但絕不能置之不理。其中「腺瘤性息肉」具有癌變潛力，及時切除是預防大腸癌最直接有效的防線。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 10 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="probiotics" onclick="openArticleModal(10)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-teal/10 text-teal font-medium px-2 py-0.5 rounded">腸道微生態</span>
+                        <span>2026-05-15</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        10. 慢性腹瀉找不出原因？認識微觀性結腸炎與腸道菌相失衡
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        常年腹瀉卻檢查不出結構性病變？這可能與腸道微生態失衡及微觀性發炎有關。陳教授為您解構神祕腹瀉的成因與調理方針。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 11 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="probiotics" onclick="openArticleModal(11)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-teal/10 text-teal font-medium px-2 py-0.5 rounded">益生菌科普</span>
+                        <span>2026-05-01</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        11. 益生菌可以空腹吃嗎？解析好菌最佳食用時間與搭配禁忌
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        益生菌到底應該飯前吃還是飯後吃？搭配溫開水有沒有溫度限制？掌握正確的食用時機與避開抗生素衝突，才能發揮好菌最大效益。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 12 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="constipation" onclick="openArticleModal(12)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-emerald-100 text-emerald-800 font-medium px-2 py-0.5 rounded">消化不良</span>
+                        <span>2026-04-18</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        12. 飯後經常腹脹、噯氣？淺談消化不良的成因與調理之道
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        吃一點東西就飽脹難受、頻頻打嗝？功能性消化不良常與胃排空較慢及生活壓力有關。透過細嚼慢嚥與飲食調整，找回輕鬆舒適的胃。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 13 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="liver" onclick="openArticleModal(13)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-amber-100 text-amber-800 font-medium px-2 py-0.5 rounded">肝膽健康</span>
+                        <span>2026-04-02</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        13. 肝功能指數（GOT/GPT）異常代表什麼？認識常見的肝病警訊
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        健檢報告紅字總是讓人心驚。GOT與GPT指數升高代表肝細胞受到發炎或損傷。認識B肝、C肝、脂肪肝與藥物性肝炎的鑑別要點。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 14 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="endoscopy" onclick="openArticleModal(14)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-blue-100 text-blue-800 font-medium px-2 py-0.5 rounded">癌症篩檢</span>
+                        <span>2026-03-15</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        14. 遠離大腸癌：糞便潛血檢查陽性後的下一步該怎麼做？
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        國健署推動的糞便潛血檢查救了無數人。若檢驗結果呈陽性千萬不要驚慌，這代表腸道有潛在出血，最要緊的是盡快安排大腸鏡檢查。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 15 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="probiotics" onclick="openArticleModal(15)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-teal/10 text-teal font-medium px-2 py-0.5 rounded">腸腦軸線</span>
+                        <span>2026-03-01</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        15. 腸道是人體的第二大腦？探討腸腦軸線與情緒、睡眠的奧秘
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        為什麼緊張時會肚子痛？腸道透過迷走神經與大腦雙向溝通。維護腸道微生態不僅幫助消化，更能改善焦慮情緒並提升睡眠品質。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
+            <!-- Article 16 -->
+            <div class="article-card bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between" data-category="constipation" onclick="openArticleModal(16)">
+                <div class="space-y-2">
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span class="bg-emerald-100 text-emerald-800 font-medium px-2 py-0.5 rounded">銀髮保健</span>
+                        <span>2026-02-15</span>
+                    </div>
+                    <h2 class="font-bold text-navy text-base hover:text-teal transition">
+                        16. 銀髮族的消化道保健：預防便秘與營養吸收不良的照護重點
+                    </h2>
+                    <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                        隨著年齡增長，腸胃蠕動減緩與消化酵素分泌減少，長者常面臨營養吸收不良與頑固便祕。從質地調整、水分與溫和運動著手給予完善照護。
+                    </p>
+                </div>
+                <div class="pt-4 mt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                    <span class="text-gray-500"><i class="fa-solid fa-user-doctor mr-1"></i>陳邦基 教授</span>
+                    <span class="text-teal font-semibold flex items-center gap-1">閱讀全文 <i class="fa-solid fa-chevron-right text-[10px]"></i></span>
+                </div>
+            </div>
+
         </div>
 
     </main>
@@ -287,7 +530,7 @@
             });
         }
 
-        // Article Modal Database
+        // Article Modal Database (16 Articles)
         const articlesDB = {
             1: {
                 title: "益生菌效果有限？改善便秘：纖維與水才是根本解方",
@@ -342,6 +585,131 @@
                     <h3 class="text-lg font-bold text-navy mb-2">內視鏡：預防消化道腫瘤的最強防線</h3>
                     <p class="mb-3">許多民眾因為害怕疼痛而排斥胃鏡或大腸鏡檢查。然而，大腸癌大多數是由腺瘤性瘜肉歷經 5-10 年演變而來。只要在瘜肉階段透過內視鏡切除，即可大幅阻斷癌變機會。</p>
                     <p class="mb-3">現代無痛內視鏡技術已非常成熟，在麻醉科醫師全程監控下，受檢者能在舒適無痛的睡眠狀態中完成精準檢查。</p>
+                `
+            },
+            5: {
+                title: "胃食道逆流老是發作？解析「火燒心」的日常飲食禁忌與照護",
+                category: "胃食道逆流",
+                date: "2026-08-15",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">遠離火燒心與胃酸逆流</h3>
+                    <p class="mb-3">胸口灼熱、夜間咳嗽或喉嚨異物感是胃食道逆流的典型症狀。當胃賁門括約肌鬆弛，胃酸便容易逆流至食道。</p>
+                    <h4 class="font-bold text-navy text-base mt-4 mb-1">陳教授護胃守則：</h4>
+                    <ul class="list-disc pl-5 space-y-1 mb-3">
+                        <li><strong>定時定量、切勿過飽：</strong>每餐吃七分飽，避免腹壓過大。</li>
+                        <li><strong>避免刺激性食物：</strong>減少咖啡、濃茶、辛辣物、甜食及高脂肪食物。</li>
+                        <li><strong>餐後切忌立刻平躺：</strong>飯後至少維持直立 2 小時，睡眠時可將床頭稍微墊高。</li>
+                    </ul>
+                `
+            },
+            6: {
+                title: "脂肪肝不是胖子的專利！保肝護肝的飲食與運動指引",
+                category: "肝膽保健",
+                date: "2026-07-20",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">沉默的器官：脂肪肝的逆轉之道</h3>
+                    <p class="mb-3">脂肪肝在台灣成年人中相當普遍，且不只發生在肥胖者身上，過度節食、營養失衡或三高患者也容易罹患。若長期置之不理，可能進展為脂肪性肝炎與肝纖維化。</p>
+                    <p class="mb-3">陳教授建議透過每週 150 分鐘的有氧運動、減少精緻糖及果糖攝取，並多攝取抗發炎的地中海飲食來守護肝臟健康。</p>
+                `
+            },
+            7: {
+                title: "腸躁症（IBS）腹痛腹瀉交替？低FODMAP飲食調理全攻略",
+                category: "腸道調理",
+                date: "2026-07-05",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">認識腸躁症與低FODMAP飲食</h3>
+                    <p class="mb-3">大腸急躁症（IBS）是一種功能性腸胃障礙，患者經常反覆出現腹痛、腹脹、腹瀉或便秘交替。醫學研究發現，某些容易在腸道中發酵的短鏈碳水化合物（簡稱 FODMAP）是引發脹氣與腹痛的元凶。</p>
+                    <p class="mb-3">採取短期低 FODMAP 飲食（如減少特定豆類、洋蔥、乳製品及某些水果），並逐步找出個人耐受度，能有效改善腸胃敏感。</p>
+                `
+            },
+            8: {
+                title: "幽門螺旋桿菌與胃炎、胃潰瘍的關聯及根除治療重要性",
+                category: "胃炎防護",
+                date: "2026-06-18",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">根除幽門桿菌，阻斷胃病連鎖反應</h3>
+                    <p class="mb-3">幽門螺旋桿菌（H. pylori）是寄生在胃黏膜上的細菌，會破壞胃黏膜屏障，引發慢性胃炎、胃及十二指腸潰瘍，甚至增加胃癌風險。</p>
+                    <p class="mb-3">若經碳13呼氣試驗或胃鏡檢查確診感染，務必遵照醫囑完成標準的除菌療程（約 10~14 天抗生素合併胃藥），切勿自行停藥以免產生抗藥性。</p>
+                `
+            },
+            9: {
+                title: "大腸息肉一定要切除嗎？解析腺瘤性息肉與大腸癌的距離",
+                category: "消化系內視鏡",
+                date: "2026-06-02",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">早期切除息肉，杜絕大腸癌發生</h3>
+                    <p class="mb-3">大腸息肉種類繁多，其中「增生性息肉」癌變機率極低，但「腺瘤性息肉」則被醫界視為大腸癌的前身，經過數年演變可能轉為惡性腫瘤。</p>
+                    <p class="mb-3">陳教授強調，在大腸鏡檢查中一旦發現腺瘤性息肉，醫師通常會當場進行內視鏡切除，這是預防大腸癌最有效、最經濟的醫療手段。</p>
+                `
+            },
+            10: {
+                title: "慢性腹瀉找不出原因？認識微觀性結腸炎與腸道菌相失衡",
+                category: "腸道微生態",
+                date: "2026-05-15",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">破解不明原因慢性腹瀉</h3>
+                    <p class="mb-3">許多患者長期腹瀉，做了常規抽血與大腸鏡卻發現黏膜外觀完全正常，常被診斷為腹瀉型腸躁症。然而，透過切片進行顯微鏡檢查，有時會發現「微觀性結腸炎」。</p>
+                    <p class="mb-3">搭配腸道菌相重建、調整飲食與抗發炎治療，往往能讓患者擺脫長期腹瀉的困擾。</p>
+                `
+            },
+            11: {
+                title: "益生菌可以空腹吃嗎？解析好菌最佳食用時間與搭配禁忌",
+                category: "益生菌科普",
+                date: "2026-05-01",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">吃對時間，讓益生菌發揮最大功效</h3>
+                    <p class="mb-3">市售益生菌琳瑯滿目，何時食用效果最好？一般而言，若產品具備耐酸包埋技術，空腹或隨餐食用皆可；若無特殊包埋，則建議在胃酸較不強烈的隨餐或飯後食用。</p>
+                    <p class="mb-3">此外，服用抗生素期間應與益生菌間隔至少 2 小時，避免好菌一同被抗生素殺滅。</p>
+                `
+            },
+            12: {
+                title: "飯後經常腹脹、噯氣？淺談消化不良的成因與調理之道",
+                category: "消化不良",
+                date: "2026-04-18",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">告別飯後沉重感與脹氣</h3>
+                    <p class="mb-3">功能性消化不良常表現為上腹痛、早飽感、飯後脹氣與頻繁噯氣。這與胃部蠕動協調性下降、內臟敏感度增加以及情緒壓力密切相關。</p>
+                    <p class="mb-3">陳教授建議保持細嚼慢嚥、避免產氣食物（如地瓜、糯米、碳酸飲料），並維持規律作息來改善胃部排空。</p>
+                `
+            },
+            13: {
+                title: "肝功能指數（GOT/GPT）異常代表什麼？認識常見的肝病警訊",
+                category: "肝膽健康",
+                date: "2026-04-02",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">解讀健檢報告中的GOT與GPT</h3>
+                    <p class="mb-3">GOT（AST）與 GPT（ALT）是存在於肝細胞內的酵素。當肝細胞受損發炎時，這些酵素便會釋放到血液中，導致指數上升。</p>
+                    <p class="mb-3">造成指數異常的原因涵蓋 B、C 型肝炎病毒感染、脂肪肝、過度飲酒、熬夜或特定藥物與保健食品的代謝負擔，需由專科醫師進一步檢驗釐清。</p>
+                `
+            },
+            14: {
+                title: "遠離大腸癌：糞便潛血檢查陽性後的下一步該怎麼做？",
+                category: "癌症篩檢",
+                date: "2026-03-15",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">糞便潛血陽性不等於癌症，但絕不可輕忽</h3>
+                    <p class="mb-3">政府免費提供的定量免疫法糞便潛血檢查（FOBT），是早期發現大腸直腸癌的神兵利器。若檢查結果呈陽性，切莫恐慌，因為痔瘡出血、瘜肉或發炎也可能導致陽性反應。</p>
+                    <p class="mb-3">最關鍵的動作是儘快安排大腸鏡檢查，直接找出出血根源並當場處理。</p>
+                `
+            },
+            15: {
+                title: "腸道是人體的第二大腦？探討腸腦軸線與情緒、睡眠的奧秘",
+                category: "腸腦軸線",
+                date: "2026-03-01",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">腸胃與情緒的奇妙神經連結</h3>
+                    <p class="mb-3">人體腸道擁有數以億計的神經細胞（腸神經系統），並透過「腸腦軸線」（Gut-Brain Axis）與大腦雙向對話。人體高達 90% 的血清素（快樂荷爾蒙）是由腸道菌群合成。</p>
+                    <p class="mb-3">照顧好腸道微生態，不僅能改善腸胃不適，對於調節焦慮情緒、提升睡眠品質也有顯著助益。</p>
+                `
+            },
+            16: {
+                title: "銀髮族的消化道保健：預防便秘與營養吸收不良的照護重點",
+                category: "銀髮保健",
+                date: "2026-02-15",
+                content: `
+                    <h3 class="text-lg font-bold text-navy mb-2">守護長者的腸胃健康與營養吸收</h3>
+                    <p class="mb-3">高齡長者常因牙口不好、水分攝取不足、活動量減少及胃腸道老化，面臨嚴重的便秘與營養吸收障礙。</p>
+                    <p class="mb-3">陳教授建議在飲食上採取質地軟化、少量多餐、增加水溶性膳食纖維，並配合適度散步運動，全面提升長者的生活品質。</p>
                 `
             }
         };
